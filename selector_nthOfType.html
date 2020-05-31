@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <title>nth-of-type | 選取器</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    mark {
+
+        background-color: #4e4d4d;
+        padding: 2px 5px;
+        border-radius: 5px;
+        color: #eee;
+    }
+
+    .small_title {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .wrap {
+        width: 500px;
+        margin: 0 auto;
+        border: 1px solid #333;
+        overflow: hidden;
+    }
+
+    .wrap .item,
+    .wrap .code {
+        width: 100%;
+        float: left;
+    }
+
+    .item :nth-of-type(2) {
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div id="header">
+        <div id="menu" class="container">
+            <ul>
+                <li class="current_page_item"><a href="#" accesskey="1" title="">首頁</a></li>
+                <li><a href="#" accesskey="1" title="">CSS資料</a></li>
+                <li><a href="#" accesskey="2" title="">JavaScript資料</a></li>
+                <li><a href="#" accesskey="3" title="">練習區</a></li>
+                <li><a href="#" accesskey="4" title="">雜事</a></li>
+                <li><a href="#" accesskey="5" title="">ABOUT ME</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="small_title">
+        <h2>選取器</h2>
+        <p>可以選到<mark>奇數列</mark>資料
+        </p>
+    </div>
+    <div class="wrap">
+        <p>選取偶數列</p>
+        <div>
+
+            <div class="item">
+                <span>span 1</span>
+                <div>div 1</div>
+                <span>span 2</span>
+                <div>div 2</div>
+                <span class="A">span 3 有 class A</span>
+                <div class="A">div 3 有 class A</div>
+                <span class="A">span 4 有 class A</span>
+                <div class="A">div 4 有 class A</div>
+            </div>
+            <div class="code">
+                <!-- <div class="wrap"> -->
+                <!-- <span>span 1</span> -->
+                <!-- <div>div 1</div> -->
+                <!-- <span>span 2</span> -->
+                <!-- <div>div 2</div> -->
+                <!-- <span class="A">span 3 有 class A</span> -->
+                <!-- <div class="A">div 3 有 class A</div> -->
+                <!-- <span class="A">span 4 有 class A</span> -->
+                <!-- <div class="A">div 4 有 class A</div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

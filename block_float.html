@@ -8,13 +8,21 @@
     <link href="default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 
-    <title>Block_Float</title>
+    <title>Block_Float | CSS</title>
 </head>
 <style>
     * {
         margin: 0;
         padding: 0;
         list-style: none;
+    }
+
+    mark {
+
+        background-color: #4e4d4d;
+        padding: 2px 5px;
+        border-radius: 5px;
+        color: #eee;
     }
 
     .clear-fixed {
@@ -24,8 +32,8 @@
     .wrap {
         width: 960px;
         margin: auto;
-        overflow: hidden;
-        background-color: #eee;
+        /* overflow: hidden; */
+        background-color: #333;
     }
 
     .small_title {
@@ -107,7 +115,8 @@
     </div>
     <div class="small_title">
         <h2>方塊式排版</h2>
-        <p>主要使用float排版，淡入淡出使用 transition 搭配 opacity，縮放效果使用 transform</p>
+        <p>主要使用<mark>Float</mark>排版，淡入淡出使用<mark>transition</mark> 搭配 <mark>opacity</mark>，縮放效果使用 <mark>transform</mark>
+        </p>
     </div>
     <div class="wrap">
 
@@ -151,7 +160,7 @@
                     est ad corrupti ullam.</p>
             </div>
         </div>
-
+        <div class="clear-fixed"></div>
     </div>
 </body>
 
