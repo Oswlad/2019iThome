@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+
+    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Picture | center</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    mark {
+
+        background-color: #4e4d4d;
+        padding: 2px 5px;
+        border-radius: 5px;
+        color: #eee;
+    }
+
+    .small_title {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .wrap {
+        width: 500px;
+        margin: 0 auto;
+        border: 1px solid #333;
+        overflow: hidden;
+    }
+
+    .wrap .item,
+    .wrap .code {
+        width: 100%;
+        float: left;
+    }
+
+    .item :nth-of-type(2) {
+        background-color: red;
+    }
+
+    section {
+        margin: 0 auto;
+    }
+
+    .pic1 {
+        width: 355px;
+        height: 600px;
+        background-image: url(images/asset1.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    .pic2 {
+        width: 355px;
+        height: 600px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .pic2 img {
+        position: absolute;
+        left: -50%;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <div id="header">
+        <div id="menu" class="container">
+            <ul>
+                <li class="current_page_item"><a href="index.html" accesskey="1" title="">首頁</a></li>
+                <li><a href="#" accesskey="1" title="">CSS資料</a></li>
+                <li><a href="#" accesskey="2" title="">JavaScript資料</a></li>
+                <li><a href="#" accesskey="3" title="">練習區</a></li>
+                <li><a href="#" accesskey="4" title="">雜事</a></li>
+                <li><a href="#" accesskey="5" title="">ABOUT ME</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="small_title">
+        <h2>圖片置中</h2>
+        <p>第一種方式，使用<mark>Background-image</mark>，第二種方式使用<mark>overflow:hidden</mark> + <mark>定位</mark>
+        </p>
+    </div>
+    <div class="wrap">
+        <section>
+            <img src="images/pic_center1.jpg" alt="">
+        </section>
+
+        <section>
+            <p>一</p>
+            <div class="pic1"></div>
+        </section>
+        <section>
+            <p>二</p>
+            <div class="pic2">
+                <img src="images/asset1.jpeg" alt="">
+            </div>
+        </section>
+    </div>
+
+
+</body>
