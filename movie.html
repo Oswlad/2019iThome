@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <title>Movie</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: 1em;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    body {
+        background-image: url(https://images.unsplash.com/photo-1561587327-41f8d18f71df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: 50% 0%;
+
+    }
+
+    mark {
+        padding: 5px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .top h2 {
+        margin-top: 20px;
+        padding: 20px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .top span {
+        position: absolute;
+        right: 3px;
+        top: 60px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 900;
+    }
+
+    .top span a {
+        color: #fff;
+    }
+
+
+    .wrap {
+        /* width:1200px; */
+        /* background-color: #eee; */
+        text-align: center;
+        margin: 0 auto;
+        background-color: rgba(256, 256, 256, 0.5);
+    }
+
+    .wrap h2 {
+        padding: 20px 30px;
+    }
+
+    .item:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    .item:first-child::after {
+        content: '近期展出';
+        position: absolute;
+        width: 100px;
+        /* height: 20px; */
+        background-color: rgba(242, 82, 32, 1);
+        right: 5px;
+        top: 100px;
+        color: #fff;
+        padding: 5px;
+    }
+
+    .pic {
+        display: block;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .pic img {
+        width: 100%;
+    }
+
+    .text {
+        color: #333;
+        font-weight: 900;
+    }
+
+    .text p {
+        padding: 10px;
+        text-align: left;
+    }
+
+
+
+    @media screen and (min-width:768px) {
+        .top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: block;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #eee;
+            z-index: 10;
+        }
+
+        .top h2 {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .top span {
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 900;
+        }
+
+
+
+        .wrap {
+            max-width: 960px;
+            padding: 50px;
+            margin-top: 120px;
+            position: relative;
+        }
+
+        .item {
+            display: flex;
+            border-radius: 10px;
+        }
+
+        .item:first-child::after {
+
+            right: 50px;
+            top: 60px;
+            color: #fff;
+            padding: 5px;
+        }
+
+        .pic {
+            width: 25%;
+            float: left;
+            vertical-align: middle;
+            margin: auto;
+        }
+
+        .text {
+            width: 75%;
+            float: left;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 10px 0;
+        }
+
+        .item::after {
+            content: '';
+            display: block;
+            clear: both;
+            background-color: red;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="top">
+        <h2>近期展覽資訊</h2>
+        <span>from <a href="https://cloud.culture.tw/">文化部</a></sapn>
+    </div>
+    <div class="wrap" id="wrap">
+
+
+        <!-- <div class="item">
+            <div class="pic"><img src="https://picsum.photos/300/300?random=10" alt="">
+            </div>
+            <div class="text">
+                <h2>Lorem, ipsum dolor.</h2>
+                <div class="content"></div>
+            </div>
+        </div> -->
+
+        <div class="seach_list"></div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
+    <script>
+        var seach_list = document.getElementsByClassName('seach_list')[0];
+        var openUrl =
+            'https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=8';
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', openUrl, true);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                var data = JSON.parse(this.responseText);
+                console.log(data[data.length - 1]);
+
+                html = '';
+                seach_list.innerHTML = '';
+                for (let i = 1; i < 10; i = i + 1) {
+                    html += '<div class="item">'
+                    html += '<div class="pic"><img src="https://picsum.photos/300/300?random=' + i + '"></div>'
+                    html += '<div class="text"><h2>' + data[data.length - i].title + '</h2>'
+                    html += '<p class="date"><mark>' + data[data.length - i].endDate + '</mark></p>'
+                    html += '<p>' + data[data.length - i].descriptionFilterHtml + '</p></div></div>'
+                }
+                seach_list.innerHTML = html;
+
+            }
+        };
+
+
+    </script>
+</body>
+
+</html>
