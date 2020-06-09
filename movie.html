@@ -69,18 +69,23 @@
         padding: 20px 30px;
     }
 
+    .item {
+        position: relative;
+    }
+
     .item:nth-child(odd) {
         background-color: #fff;
     }
 
-    .item:first-child::after {
+    .item:first-child::after,
+    .item:nth-child(3n+1)::after {
         content: '近期展出';
         position: absolute;
         width: 100px;
         /* height: 20px; */
         background-color: rgba(242, 82, 32, 1);
         right: 5px;
-        top: 100px;
+        top: 7px;
         color: #fff;
         padding: 5px;
     }
@@ -132,13 +137,11 @@
             font-weight: 900;
         }
 
-
-
         .wrap {
             max-width: 960px;
             padding: 50px;
             margin-top: 120px;
-            position: relative;
+            /* position: relative; */
         }
 
         .item {
@@ -146,12 +149,13 @@
             border-radius: 10px;
         }
 
-        .item:first-child::after {
-            right: 50px;
-            top: 60px;
-            color: #fff;
-            padding: 5px;
+        .item:first-child::after,
+        .item:nth-child(3n+1)::after {
+            right: 0px;
+            top: 10px;
         }
+
+
 
         .pic {
             width: 25%;
@@ -179,7 +183,6 @@
             content: '';
             display: block;
             clear: both;
-            background-color: red;
         }
 
     }
