@@ -63,6 +63,7 @@
         text-align: center;
         margin: 0 auto;
         background-color: rgba(256, 256, 256, 0.5);
+        margin-bottom: 100px;
     }
 
     .wrap h2 {
@@ -110,7 +111,15 @@
         text-align: left;
     }
 
-
+    .footer {
+        width: 100%;
+        background-color: rgba(256, 256, 256, 0.5);
+        padding: 5px;
+        text-align: center;
+        color: #000;
+        font-weight: 200;
+        font-size: 12px;
+    }
 
     @media screen and (min-width:768px) {
         .top {
@@ -207,11 +216,12 @@
 
         <div class="seach_list"></div>
     </div>
+    <div class="footer">Copyright &copy;2020 by Oswald</div>
 
     <!-- <script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
     <script>
-        var seach_list = document.getElementsByClassName('seach_list')[0];
-        var openUrl =
+        let seach_list = document.getElementsByClassName('seach_list')[0];
+        let openUrl =
             'https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=8';
         var xhr = new XMLHttpRequest();
         xhr.open('GET', openUrl, true);
