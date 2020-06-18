@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Modal | CSS</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			line-height: 1em;
+		}
+		body {
+			color: #333;
+			font-family: 'Helvetica', arial;
+		}
+
+		.wrap {
+			width: 660px;
+			margin: 0 auto;
+			margin-top: 100px;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 30px;
+			margin-bottom: 40px;
+			z-index: 11;
+		}
+		p {
+			margin-bottom: 20px;
+		}
+		.btn {
+			background: #428bca;
+			border: #357ebd solid 1px;
+			border-radius: 3px;
+			color: #fff;
+			display: inline-block;
+			font-size: 14px;
+			padding: 8px 15px;
+			text-decoration: none;
+			text-align: center;
+			min-width: 60px;
+			position: relative;
+			transition: color 0.1s ease;
+		}
+
+        .modal{
+            display:none;
+            position:fixed;
+            top:0;
+            right:0;
+            bottom: 0;
+            left: 0;
+            width:100%;
+            background-color: rgba(0,0,0,.4);
+            z-index:10;
+           mask-image: radial-gradient(circle at 50% 60%, black 50%, rgba(0, 0, 0, 0.6) 50%);
+
+        }
+        .modal::before{
+            
+        }
+        .modal:target{
+            display: block;
+            
+        }
+
+        /* .mask {
+  background-color: rgba(0,0,0,.5);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  
+        } */
+	</style>
+	<body>
+		<div class="wrap">
+			<h1>Modal Practice | Pure CSS | 2020</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque sequi fugiat perspiciatis.
+				Repudiandae eos deserunt reiciendis. Magni, ullam cupiditate! Reiciendis corporis eaque,
+				deserunt quisquam tempora vel libero minima quidem. Iure.
+			</p>
+			<a href="#modal" class="btn">modal</a>
+			<a href="#modal_dialog" class="btn">modal dialog</a>
+			<div class="modal mask" id="modal" aria-hidden="true">dsfdsf</div>
+			<div class="modal_dialog" id="modal_dialog">
+				<h2>Modal in CSS</h2>
+			</div>
+		</div>
+	</body>
+</html>
