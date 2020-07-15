@@ -176,7 +176,9 @@
 </html>
 
 <script>
+
     setInterval(() => {
+        let today = new Date();
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
@@ -184,13 +186,13 @@
                 // document.getElementById("demo").innerHTML = this.responseText;
                 // document.getElementById("area").innerHTML = createsideli(str);
                 document.getElementById("city").innerHTML = mainli(str);
-                document.getElementById('update').innerHTML = 'Last update : ' + str[0].updateTime;
+                document.getElementById('update').innerHTML = 'Last update : ' + str[0].updateTime + 'from 中華郵政';
                 choseArea(str)
             }
         };
         xhttp.open("GET", "https://3000.gov.tw/hpgapi-openmap/api/getPostData", true);
         xhttp.send();
-        console.log(Date.now())
+        console.log(today.toLocaleTimeString())
     }, 20000);
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -199,7 +201,7 @@
             // document.getElementById("demo").innerHTML = this.responseText;
             document.getElementById("area").innerHTML = createsideli(str);
             document.getElementById("city").innerHTML = mainli(str);
-            document.getElementById('update').innerHTML = 'Last update : ' + str[0].updateTime;
+            document.getElementById('update').innerHTML = 'Last update : ' + str[0].updateTime + 'from 中華郵政';
             choseArea(str)
         }
     };
