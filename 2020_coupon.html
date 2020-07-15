@@ -168,7 +168,7 @@
             if (this.readyState == 4 && this.status == 200) {
                 const str = JSON.parse(this.responseText);
                 // document.getElementById("demo").innerHTML = this.responseText;
-                document.getElementById("area").innerHTML = createsideli(str);
+                // document.getElementById("area").innerHTML = createsideli(str);
                 document.getElementById("city").innerHTML = mainli(str);
                 document.getElementById('update').innerHTML = str[0].updateTime;
                 choseArea(str)
