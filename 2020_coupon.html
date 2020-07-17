@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2020 振興三倍券 - 郵局振興卷剩餘數量</title>
     <meta property="og:title" content="2020 振興三倍券 郵局剩餘數量">
     <meta name="keywords"
           content="郵局,振興抵用券,振興抵用卷,振興補助,住宿優惠,訂房補助,訂房優惠,振興方案,振興折扣券,消費抵用券,國旅抵用券,振興優惠券,振興方案,紓困方案,振興紓困券,振興酷碰券,酷碰券懶人包,修正版酷碰券,實體券,消費券,電子票證,行動支付,安心旅遊,防疫旅遊,政府旅遊補助,旅遊補助,振興券,酷碰券,振興三倍券,三倍券,振興卷,三倍卷,振興三倍卷,振興補助,振興券怎麼領,振興券使用範圍">
+    <title>2020 振興三倍券 - 郵局振興卷剩餘數量</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144348228-2"></script>
@@ -78,6 +79,40 @@
         padding: 10px;
         padding-right: 70px;
         font-weight: 600;
+    }
+
+    #search_txt {
+        border: 1px solid #ddd;
+        text-align: center;
+        border-radius: 5px;
+        width: 60%;
+        margin: 10px auto;
+        box-sizing: border-box;
+    }
+
+    #search_txt input {
+        border: none;
+        padding: 10px;
+        display: inline-block;
+        width: 92%;
+
+    }
+
+    #search_txt input:focus {
+        outline: none;
+    }
+
+    #search_txt i {
+        float: right;
+        background-color: #aaa;
+        display: inline-block;
+        padding: 10px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    #search_txt i:hover {
+        cursor: pointer;
     }
 
     section.container {
@@ -156,8 +191,8 @@
         </aside>
 
         <section class="container">
-            <h2>2020 振興三倍券 - 郵局振興卷剩餘數量</h2>
-
+            <h2>2020 振興三倍券 - 郵局振興券剩餘數量</h2>
+            <div id="search_txt"><input type="text" id="search_input"><i class="fas fa-search"></i></div>
             <section class="city">
                 <p id="update"></p>
                 <ul id="city"></ul>
@@ -176,13 +211,13 @@
 </html>
 
 <script>
-
+    let search_str = '';
     setInterval(() => {
         let today = new Date();
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                const str = JSON.parse(this.responseText);
+                var str = JSON.parse(this.responseText);
                 // document.getElementById("demo").innerHTML = this.responseText;
                 // document.getElementById("area").innerHTML = createsideli(str);
                 document.getElementById("city").innerHTML = mainli(str);
@@ -197,7 +232,7 @@
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            const str = JSON.parse(this.responseText);
+            var str = JSON.parse(this.responseText);
             // document.getElementById("demo").innerHTML = this.responseText;
             document.getElementById("area").innerHTML = createsideli(str);
             document.getElementById("city").innerHTML = mainli(str);
@@ -252,5 +287,37 @@
         // })
     }
 
+
+    const search_input = document.querySelector('#search_input');
+    search_input.addEventListener('keyup', function () {
+
+        search_str = str;
+        console.log('key = ' + this.innerText + 'result:' + search_str)
+
+    })
+
+
+
+
+// const aa=[{"hsnCd": "A", "hsnNm": "臺北市", "townCd": null, "townNm": "中正區", "storeCd": "000100", "storeNm": "臺北北門郵局(臺北901支)", 
+//     "addr": "臺北市中正區忠孝西路一段120號1樓", "zipCd": "100", "tel": "(02)2381-3135",
+//     "busiTime": "週一至週五 儲匯:08:30-21:00週六: 09: 00-17: 00",
+//     "busiMemo":"109年7月18日及7月25日(週六)上午辦理綜合業務，下午僅辦「振興券發售業務」。集郵營業時間週一至週五08: 30 - 18: 00房貸營業時間週一至週五08: 30-17: 30
+// * 本日可服務量：1100
+// * 本日剩餘可服務量：966
+//                 (僅供參考，請以郵局現場叫號為主)","longitude":"121.511431","latitude":"25.047355","total":"18728","updateTime":"2020 / 07 / 16 10: 00: 52"},{"hsnCd":"A","hsnNm":"臺北市","townCd":null,"townNm":"中正區","storeCd":"000101","storeNm":"臺北東門郵局(臺北1支)","addr":"臺北市中正區信義路二段163號","zipCd":"100","tel":"(02)2321-4679","busiTime":"週一至週五 儲匯: 08: 30-17: 00
+// 週六: 09: 00 - 17: 00
+// ","busiMemo":"109年7月18日及7月25日(週六)上午辦理綜合業務，下午僅辦「振興券發售業務」。
+
+//             *本日可服務量：400
+// * 本日剩餘可服務量：380
+// * 現在前往預計可受理時段：08: 30 - 09: 00
+//                 (僅供參考，請以郵局現場叫號為主)","longitude":"121.528922","latitude":"25.03408","total":"1070","updateTime":"2020 / 07 / 16 10: 00: 52"},{"hsnCd":"A","hsnNm":"臺北市","townCd":null,"townNm":"萬華區","storeCd":"000102","storeNm":"臺北漢中街郵局(臺北2支)","addr":"臺北市萬華區漢中街173號","zipCd":"108","tel":"(02)2331-4069","busiTime":"週一至週五 儲匯: 08: 30-17: 00
+// 週六: 09: 00 - 17: 00
+// ","busiMemo":"109年7月18日及7月25日(週六)僅辦理「振興券發售業務」。
+
+//             *本日可服務量：400
+// * 本日剩餘可服務量：335
+//                 (僅供參考，請以郵局現場叫號為主)","longitude":"121.507005","latitude":"25.04132","total":"992","updateTime":"2020 / 07 / 16 10: 00: 52"}]
 
 </script>
