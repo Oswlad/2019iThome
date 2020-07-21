@@ -79,11 +79,11 @@
         padding: 10px;
         padding-right: 70px;
         font-weight: 600;
-        position:sticky;
-        top:0;
-        color:#038551;
-        background-color: rgba(255,255,255,.8)
-       /* padding-left:0; */
+        position: sticky;
+        top: 0;
+        color: #038551;
+        background-color: rgba(255, 255, 255, .8)
+            /* padding-left:0; */
     }
 
     #search_txt {
@@ -144,14 +144,14 @@
         width: 24%;
         box-sizing: border-box;
         margin-bottom: auto;
-        min-height:320px;
-        border-radius:5px;
+        min-height: 320px;
+        border-radius: 5px;
     }
 
     .city .storeName {
-        text-align: center;  
+        text-align: center;
         font-weight: 800;
-        
+
     }
 
     .city .addr {
@@ -160,6 +160,10 @@
         font-size: 14px;
         padding: 10px 0;
         border-bottom: 2px solid #038551;
+    }
+
+    .city .busiMemo {
+        padding-top: 10px;
     }
 
     .amount {
@@ -194,9 +198,10 @@
 
 
     @media screen and (max-width:767px) {
-        .wrap{
-            width:100%;
+        .wrap {
+            width: 100%;
         }
+
         aside {
             width: 20%;
             left: -120px;
@@ -233,7 +238,7 @@
 
         <section class="container">
             <h2>2020 振興三倍券 - 郵局振興券剩餘數量</h2>
-            <div id="search_txt"><input type="text" id="search_input"><i class="fas fa-search"></i></div>
+            <!-- <div id="search_txt"><input type="text" id="search_input"><i class="fas fa-search"></i></div> -->
             <section class="city">
                 <p id="update"></p>
                 <ul id="city"></ul>
@@ -253,39 +258,39 @@
 
 <script>
     let search_str = '';
-    var response_data='';
+    var response_data = '';
     setInterval(() => {
         let today = new Date();
-      sendXML();
+        sendXML();
         console.log(today.toLocaleTimeString())
     }, 40000);
 
 
-    function sendXML(){
+    function sendXML() {
         var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var str = JSON.parse(this.responseText);
-            response_data=str;
-            // document.getElementById("demo").innerHTML = this.responseText;
-            document.getElementById("area").innerHTML = createsideli(str);
-            document.getElementById("city").innerHTML = mainli(str);
-            document.getElementById('update').innerHTML = 'Last update : ' + str[0].updateTime + ' ( from 中華郵政 )';
-            choseArea(str)
-           
-            
-        }
-    };
-    xhttp.open("GET", "https://3000.gov.tw/hpgapi-openmap/api/getPostData", true);
-    xhttp.send();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var str = JSON.parse(this.responseText);
+                response_data = str;
+                // document.getElementById("demo").innerHTML = this.responseText;
+                document.getElementById("area").innerHTML = createsideli(str);
+                document.getElementById("city").innerHTML = mainli(str);
+                document.getElementById('update').innerHTML = 'Last update : ' + str[0].updateTime + ' ( from 中華郵政 )';
+                choseArea(str)
+
+
+            }
+        };
+        xhttp.open("GET", "https://3000.gov.tw/hpgapi-openmap/api/getPostData", true);
+        xhttp.send();
     }
 
     sendXML();
 
     function myFunction1(xhttp) {
- console.log(xhttp)
-}
-myFunction1()
+        console.log(xhttp)
+    }
+    myFunction1()
     function createsideli(str) {
         let cityli = "";
         let ary = [];
@@ -316,12 +321,12 @@ myFunction1()
             let color = '';
             block_li =
                 block_li +
-                `<li><p class="amount">${element.total}</p><p class="storeName">${element.storeNm}</p><p class="addr">${element.addr}</p><p>${element.busiMemo}</p></li>`;
+                `<li><p class="amount">${element.total}</p><p class="storeName">${element.storeNm}</p><p class="addr">${element.addr}</p><p class="busiMemo">${element.busiMemo}</p></li>`;
         });
         return block_li;
     }
 
- 
+
 
     function choseArea(str) {
         // let result = str.filter(function (item) {
