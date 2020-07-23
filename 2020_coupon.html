@@ -1,181 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="2020 振興三倍券 郵局剩餘數量">
-    <meta name="keywords"
-          content="郵局,振興抵用券,振興抵用卷,振興補助,住宿優惠,訂房補助,訂房優惠,振興方案,振興折扣券,消費抵用券,國旅抵用券,振興優惠券,振興方案,紓困方案,振興紓困券,振興酷碰券,酷碰券懶人包,修正版酷碰券,實體券,消費券,電子票證,行動支付,安心旅遊,防疫旅遊,政府旅遊補助,旅遊補助,振興券,酷碰券,振興三倍券,三倍券,振興卷,三倍卷,振興三倍卷,振興補助,振興券怎麼領,振興券使用範圍">
+    <meta property="og:title" content="2020 振興三倍券 郵局剩餘數量" />
+    <meta
+      name="keywords"
+      content="郵局,振興抵用券,振興抵用卷,振興補助,住宿優惠,訂房補助,訂房優惠,振興方案,振興折扣券,消費抵用券,國旅抵用券,振興優惠券,振興方案,紓困方案,振興紓困券,振興酷碰券,酷碰券懶人包,修正版酷碰券,實體券,消費券,電子票證,行動支付,安心旅遊,防疫旅遊,政府旅遊補助,旅遊補助,振興券,酷碰券,振興三倍券,三倍券,振興卷,三倍卷,振興三倍卷,振興補助,振興券怎麼領,振興券使用範圍"
+    />
     <title>2020 振興三倍券 - 郵局振興券剩餘數量</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-</head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144348228-2"></script>
-<script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+  </head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-144348228-2"
+  ></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    gtag('config', 'UA-144348228-2');
-</script>
+    gtag("config", "UA-144348228-2");
+  </script>
 
-<style>
+  <style>
     @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,700,900&display=swap");
 
     * {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+      margin: 0;
+      padding: 0;
+      list-style: none;
     }
 
     .wrap {
-        width: 100%;
-
+      width: 100%;
     }
 
     aside {
-        width: 13%;
-        height: 100vh;
-        position: fixed;
-        background-color: #eee;
-        padding: 5px;
-        text-align: center;
-        top: 0;
-        box-sizing: border-box;
+      width: 13%;
+      height: 100vh;
+      position: fixed;
+      background-color: #eee;
+      padding: 5px;
+      text-align: center;
+      top: 0;
+      box-sizing: border-box;
     }
 
     aside ul {
-        padding-top: 30%;
+      padding-top: 30%;
     }
 
     aside li {
-        font-size: 0;
+      font-size: 0;
     }
 
     aside a {
-        font-size: 16px;
-        text-decoration: none;
-        color: #888;
-        padding: 6px;
-        display: block;
+      font-size: 16px;
+      text-decoration: none;
+      color: #888;
+      padding: 6px;
+      display: block;
     }
 
     aside a:hover {
-        background-color: #ddd;
-        color: #333;
+      background-color: #ddd;
+      color: #333;
     }
 
     .container h2 {
-        padding: 50px 0;
-        text-align: center;
-        color: green;
-        font-weight: 600;
-        font-size: 36px;
+      padding: 50px 0;
+      text-align: center;
+      color: green;
+      font-weight: 600;
+      font-size: 36px;
     }
-
-    #update {
-        text-align: right;
-        padding: 10px;
-        padding-right: 70px;
-        font-weight: 600;
-        position:sticky;
-        top:0;
-        color:#038551;
-        background-color: rgba(255,255,255,.8)
-       /* padding-left:0; */
+    .item{
+        background-color: rgba(250, 250, 250, 0.8);
+        padding:10px 30px;
+        display:flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        color: #038551;
+        font-weight: 500;
+        position: sticky;
+      top: 0;
     }
+    
+    /* #update {
+      text-align: right;
+      padding: 10px;
+      padding-right: 70px;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      color: #038551;
+      background-color: rgba(255, 255, 255, 0.8);
+      /* padding-left:0; */
+    } */
 
     #search_txt {
-        border: 1px solid #ddd;
-        text-align: center;
-        border-radius: 5px;
-        width: 60%;
-        margin: 10px auto;
-        box-sizing: border-box;
+      border: 1px solid #ddd;
+      text-align: center;
+      border-radius: 5px;
+      width: 60%;
+      margin: 10px auto;
+      box-sizing: border-box;
     }
 
     #search_txt input {
-        border: none;
-        padding: 10px;
-        display: inline-block;
-        width: 92%;
-
+      border: none;
+      padding: 10px;
+      display: inline-block;
+      width: 92%;
     }
 
     #search_txt input:focus {
-        outline: none;
+      outline: none;
     }
 
     #search_txt i {
-        float: right;
-        background-color: #aaa;
-        display: inline-block;
-        padding: 10px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
+      float: right;
+      background-color: #aaa;
+      display: inline-block;
+      padding: 10px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
     }
 
     #search_txt i:hover {
-        cursor: pointer;
+      cursor: pointer;
     }
 
     section.container {
-        margin-left: 13%;
-        background-color: #fff;
-        /* padding-top: 50px; */
+      margin-left: 13%;
+      background-color: #fff;
+      /* padding-top: 50px; */
     }
 
     .city ul {
-        padding: 0 20px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-        justify-content: center;
-        align-items: center;
-
+      padding: 0 20px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      justify-content: flex-start;
+      align-items: center;
     }
 
     .city li {
-        padding: 20px;
-        border: 1px solid #eee;
-        margin: 5px;
-        width: 24%;
-        box-sizing: border-box;
-        margin-bottom: auto;
-        min-height:320px;
-        border-radius:5px;
+      padding: 20px;
+      border: 1px solid #eee;
+      margin: 5px;
+      width: 24%;
+      box-sizing: border-box;
+      margin-bottom: auto;
+      min-height: 320px;
+      border-radius: 5px;
     }
 
     .city .storeName {
-        text-align: center;  
-        font-weight: 800;
-        
+      text-align: center;
+      font-weight: 800;
     }
 
     .city .addr {
-        color: #999;
-        text-align: center;
-        font-size: 14px;
-        padding: 10px 0;
-        border-bottom: 2px solid #038551;
+      color: #999;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px 0;
+      border-bottom: 2px solid #038551;
     }
 
     .amount {
-        font-size: 36px;
-        text-align: center;
-        font-weight: 600;
-        font-family: 'Noto Sans TC', sans-serif;
-        color: #777;
+      font-size: 36px;
+      text-align: center;
+      font-weight: 600;
+      font-family: "Noto Sans TC", sans-serif;
+      color: #777;
     }
 
     footer {
-        margin-top: 100px;
-        margin-bottom: 5px;
-        text-align: center;
-        padding: 2px 0;
-        /* background-color: #ddd; */
+      margin-top: 100px;
+      margin-bottom: 5px;
+      text-align: center;
+      padding: 2px 0;
+      /* background-color: #ddd; */
     }
 
     /* .bar {
@@ -192,176 +208,200 @@
     padding: 10px 0;
   }*/
 
+    @media screen and (max-width: 767px) {
+      .wrap {
+        width: 100%;
+      }
+      aside {
+        width: 20%;
+        left: -120px;
+      }
 
-    @media screen and (max-width:767px) {
-        .wrap{
-            width:100%;
-        }
-        aside {
-            width: 20%;
-            left: -120px;
-        }
+      section.container {
+        width: 100%;
+      }
 
-        section.container {
-            width: 100%;
-        }
+      .city ul {
+        padding: 0 5px;
+        display: inline-block;
+      }
 
-        .city ul {
-            padding: 0 5px;
-            display: inline-block;
-        }
+      .city li {
+        width: 48%;
+        display: inline-block;
+        max-height: 240px;
+        padding: 12px;
+        margin-bottom: auto;
+      }
 
-        .city li {
-            width: 48%;
-            display: inline-block;
-            max-height: 240px;
-            padding: 12px;
-            margin-bottom: auto;
-        }
-
-        #update {
-            padding-right: 0px;
-        }
+      #update {
+        padding-right: 0px;
+      }
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <div class="wrap" onload="sendXML()">
-        <aside>
-            <ul class="area" id="area"></ul>
-        </aside>
+      <aside>
+        <ul class="area" id="area"></ul>
+      </aside>
 
-        <section class="container">
-            <h2>2020 振興三倍券 - 郵局振興券剩餘數量</h2>
-            <div id="search_txt"><input type="text" id="search_input"><i class="fas fa-search"></i></div>
-            <section class="city">
-                <p id="update"></p>
-                <ul id="city"></ul>
-            </section>
-
-            <div id="demo"></div>
+      <section class="container">
+        <h2>2020 振興三倍券 - 郵局振興券剩餘數量</h2>
+        <!-- <div id="search_txt">
+          <input type="text" id="search_input" /><i class="fas fa-search"></i>
+        </div> -->
+        <section class="city">
+            <div class="item">
+                <span id="stores"></span>
+                <span id="update"></span>
+            </div>
+          
+          <ul id="city"></ul>
         </section>
-        <footer>
-            <p>Copyright &copy; 2020 | Design by Oswald.</p>
-        </footer>
+
+        <div id="demo"></div>
+      </section>
+      <footer>
+        <p>Copyright &copy; 2020 | Design by Oswald.</p>
+      </footer>
     </div>
-
-
-</body>
-
+  </body>
 </html>
 
 <script>
-    let search_str = '';
-    var response_data='';
-    setInterval(() => {
-        let today = new Date();
-      sendXML();
-        console.log(today.toLocaleTimeString())
-    }, 40000);
-
-
-    function sendXML(){
-        var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var str = JSON.parse(this.responseText);
-            response_data=str;
-            // document.getElementById("demo").innerHTML = this.responseText;
-            document.getElementById("area").innerHTML = createsideli(str);
-            document.getElementById("city").innerHTML = mainli(str);
-            document.getElementById('update').innerHTML = 'Last update : ' + str[0].updateTime + ' ( from 中華郵政 )';
-            choseArea(str)
-           
-            
-        }
-    };
-    xhttp.open("GET", "https://3000.gov.tw/hpgapi-openmap/api/getPostData", true);
-    xhttp.send();
-    }
-
+  let search_str = "";
+  var response_data = "";
+  setInterval(() => {
+    let today = new Date();
     sendXML();
+    console.log(today.toLocaleTimeString());
+  }, 40000);
 
-    function myFunction1(xhttp) {
- console.log(xhttp)
-}
-myFunction1()
-    function createsideli(str) {
-        let cityli = "";
-        let ary = [];
-        const city = ["臺北市", "新北市", "桃園市", "新竹縣", "新竹市", "苗栗縣", "臺中市", "彰化縣", "南投縣", "雲林縣", "嘉義市", "嘉義縣", "基隆市", "宜蘭縣", "臺東縣", "花蓮縣", "臺南市", "高雄市", "屏東縣", "連江縣", "金門縣", "澎湖縣"]
-        city.forEach(element => {
-            cityli = cityli + `<li><a href='javascript;:' onclick="areaFun(${element})">${element}</a></li>`;
-        })
+  function sendXML() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        response_data = JSON.parse(this.responseText);
+        // document.getElementById("demo").innerHTML = this.responseText;
+        document.getElementById("area").innerHTML = createsideli(response_data);
+        document.getElementById("city").innerHTML = mainli(response_data);
+        document.getElementById("update").innerHTML ="Last update : " + response_data[0].updateTime + " ( from 中華郵政 )";
+        mainli(response_data);
+      }
+    };
+    xhttp.open("GET","https://3000.gov.tw/hpgapi-openmap/api/getPostData",true);
+    xhttp.send();
+  }
 
-        // str.forEach((element) => {
-        //   // console.log(element.hsnNm)
-        //   if (ary.indexOf(element.hsnNm) === -1) {
-        //     ary.push(element.hsnNm);
-        //     cityli = cityli + `<li><a href='#${element.hsnNm}'>${element.hsnNm}</a></li>`;
-        //     // console.log(cityli)
-        //   } else if (cityli.indexOf(element.hsnNm) > -1) {
-        //     console.log("already exists in ary");
-        //   }
+  sendXML();
+  
+//   function myFunction1(xhttp) {
+//     console.log(xhttp);
+//   }
+//   myFunction1();
+  function createsideli(response_data) {
+    let cityli = "";
+    let ary = [];
+    const city = [
+      "臺北市",
+      "新北市",
+      "桃園市",
+      "新竹縣",
+      "新竹市",
+      "苗栗縣",
+      "臺中市",
+      "彰化縣",
+      "南投縣",
+      "雲林縣",
+      "嘉義市",
+      "嘉義縣",
+      "基隆市",
+      "宜蘭縣",
+      "臺東縣",
+      "花蓮縣",
+      "臺南市",
+      "高雄市",
+      "屏東縣",
+      "連江縣",
+      "金門縣",
+      "澎湖縣",
+    ];
+    city.forEach((element) => {
+      cityli =
+        cityli +
+        `<li><a href="javascript:;" onclick="choseArea('${element}')">${element}</a></li>`;
+    });
 
-        // });
-        // console.log(ary.sort())
-        return cityli;
-    }
+    // str.forEach((element) => {
+    //   // console.log(element.hsnNm)
+    //   if (ary.indexOf(element.hsnNm) === -1) {
+    //     ary.push(element.hsnNm);
+    //     cityli = cityli + `<li><a href='#${element.hsnNm}'>${element.hsnNm}</a></li>`;
+    //     // console.log(cityli)
+    //   } else if (cityli.indexOf(element.hsnNm) > -1) {
+    //     console.log("already exists in ary");
+    //   }
 
-    function mainli(value) {
-        let block_li = "";
-        value.forEach((element) => {
-            let all = element.total;
-            let color = '';
-            block_li =
-                block_li +
-                `<li><p class="amount">${element.total}</p><p class="storeName">${element.storeNm}</p><p class="addr">${element.addr}</p><p>${element.busiMemo}</p></li>`;
-        });
-        return block_li;
-    }
+    // });
+    // console.log(ary.sort())
+    return cityli;
+  }
 
- 
+  function mainli(value) {
+    let block_li = "";
+    value.forEach((element) => {
+      let all = element.total;
+      let color = "";
+      block_li =
+        block_li +
+        `<li><p class="amount">${element.total}</p><p class="storeName">${element.storeNm}</p><p class="addr">${element.addr}</p><p>${element.busiMemo}</p></li>`;
+    });
+    document.getElementById("city").innerHTML=block_li;
+    document.querySelector('#stores').innerHTML='共 '+value.length+' 間郵局';
+  }
 
-    function choseArea(str) {
-        // let result = str.filter(function (item) {
-        //   if (item.hsnNm === '新北市') {
-        //     console.log(item.storeNm)
-        //   }
-        // })
-    }
-
-
-    // const search_input = document.querySelector('#search_input');
-    // search_input.addEventListener('keyup', function () {
-
-    //     search_str = str;
-    //     console.log('key = ' + this.innerText + 'result:' + search_str)
-
-    // })
-
-
+  function choseArea(city) {
+    // console.log(city)
+    //  event.preventdefault();
+    var filter=[];
+    const result = response_data.filter(function(e){
+        if(e.hsnNm===city){
+            filter.push(e)
+        }
+    })
+    console.log(filter)
+    mainli(filter)
+  }
 
 
-// const aa=[{"hsnCd": "A", "hsnNm": "臺北市", "townCd": null, "townNm": "中正區", "storeCd": "000100", "storeNm": "臺北北門郵局(臺北901支)", 
-//     "addr": "臺北市中正區忠孝西路一段120號1樓", "zipCd": "100", "tel": "(02)2381-3135",
-//     "busiTime": "週一至週五 儲匯:08:30-21:00週六: 09: 00-17: 00",
-//     "busiMemo":"109年7月18日及7月25日(週六)上午辦理綜合業務，下午僅辦「振興券發售業務」。集郵營業時間週一至週五08: 30 - 18: 00房貸營業時間週一至週五08: 30-17: 30
-// * 本日可服務量：1100
-// * 本日剩餘可服務量：966
-//                 (僅供參考，請以郵局現場叫號為主)","longitude":"121.511431","latitude":"25.047355","total":"18728","updateTime":"2020 / 07 / 16 10: 00: 52"},{"hsnCd":"A","hsnNm":"臺北市","townCd":null,"townNm":"中正區","storeCd":"000101","storeNm":"臺北東門郵局(臺北1支)","addr":"臺北市中正區信義路二段163號","zipCd":"100","tel":"(02)2321-4679","busiTime":"週一至週五 儲匯: 08: 30-17: 00
-// 週六: 09: 00 - 17: 00
-// ","busiMemo":"109年7月18日及7月25日(週六)上午辦理綜合業務，下午僅辦「振興券發售業務」。
 
-//             *本日可服務量：400
-// * 本日剩餘可服務量：380
-// * 現在前往預計可受理時段：08: 30 - 09: 00
-//                 (僅供參考，請以郵局現場叫號為主)","longitude":"121.528922","latitude":"25.03408","total":"1070","updateTime":"2020 / 07 / 16 10: 00: 52"},{"hsnCd":"A","hsnNm":"臺北市","townCd":null,"townNm":"萬華區","storeCd":"000102","storeNm":"臺北漢中街郵局(臺北2支)","addr":"臺北市萬華區漢中街173號","zipCd":"108","tel":"(02)2331-4069","busiTime":"週一至週五 儲匯: 08: 30-17: 00
-// 週六: 09: 00 - 17: 00
-// ","busiMemo":"109年7月18日及7月25日(週六)僅辦理「振興券發售業務」。
+  // const search_input = document.querySelector('#search_input');
+  // search_input.addEventListener('keyup', function () {
 
-//             *本日可服務量：400
-// * 本日剩餘可服務量：335
-//                 (僅供參考，請以郵局現場叫號為主)","longitude":"121.507005","latitude":"25.04132","total":"992","updateTime":"2020 / 07 / 16 10: 00: 52"}]
+  //     search_str = str;
+  //     console.log('key = ' + this.innerText + 'result:' + search_str)
 
+  // })
+
+  // const aa=[{"hsnCd": "A", "hsnNm": "臺北市", "townCd": null, "townNm": "中正區", "storeCd": "000100", "storeNm": "臺北北門郵局(臺北901支)",
+  //     "addr": "臺北市中正區忠孝西路一段120號1樓", "zipCd": "100", "tel": "(02)2381-3135",
+  //     "busiTime": "週一至週五 儲匯:08:30-21:00週六: 09: 00-17: 00",
+  //     "busiMemo":"109年7月18日及7月25日(週六)上午辦理綜合業務，下午僅辦「振興券發售業務」。集郵營業時間週一至週五08: 30 - 18: 00房貸營業時間週一至週五08: 30-17: 30
+  // * 本日可服務量：1100
+  // * 本日剩餘可服務量：966
+  //                 (僅供參考，請以郵局現場叫號為主)","longitude":"121.511431","latitude":"25.047355","total":"18728","updateTime":"2020 / 07 / 16 10: 00: 52"},{"hsnCd":"A","hsnNm":"臺北市","townCd":null,"townNm":"中正區","storeCd":"000101","storeNm":"臺北東門郵局(臺北1支)","addr":"臺北市中正區信義路二段163號","zipCd":"100","tel":"(02)2321-4679","busiTime":"週一至週五 儲匯: 08: 30-17: 00
+  // 週六: 09: 00 - 17: 00
+  // ","busiMemo":"109年7月18日及7月25日(週六)上午辦理綜合業務，下午僅辦「振興券發售業務」。
+
+  //             *本日可服務量：400
+  // * 本日剩餘可服務量：380
+  // * 現在前往預計可受理時段：08: 30 - 09: 00
+  //                 (僅供參考，請以郵局現場叫號為主)","longitude":"121.528922","latitude":"25.03408","total":"1070","updateTime":"2020 / 07 / 16 10: 00: 52"},{"hsnCd":"A","hsnNm":"臺北市","townCd":null,"townNm":"萬華區","storeCd":"000102","storeNm":"臺北漢中街郵局(臺北2支)","addr":"臺北市萬華區漢中街173號","zipCd":"108","tel":"(02)2331-4069","busiTime":"週一至週五 儲匯: 08: 30-17: 00
+  // 週六: 09: 00 - 17: 00
+  // ","busiMemo":"109年7月18日及7月25日(週六)僅辦理「振興券發售業務」。
+
+  //             *本日可服務量：400
+  // * 本日剩餘可服務量：335
+  //                 (僅供參考，請以郵局現場叫號為主)","longitude":"121.507005","latitude":"25.04132","total":"992","updateTime":"2020 / 07 / 16 10: 00: 52"}]
 </script>
